@@ -3,5 +3,5 @@ package com.cydeo.pages;
 public class BasePage {
 
     //hello yunus
-    //hello ertugrul5
+    //hello ertugrul6
 }
