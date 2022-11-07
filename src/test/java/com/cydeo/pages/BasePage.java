@@ -3,6 +3,10 @@ package com.cydeo.pages;
 public class BasePage {
 
     //hello yunus
+// karahan
+    //hello again
+    //hello everyone
+
     //hello from Adnan
 //ersin
     //hello from ersin
@@ -19,4 +23,5 @@ public class BasePage {
     //master
    //master
 //master
+//
 }
