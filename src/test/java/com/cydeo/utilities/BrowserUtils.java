@@ -12,20 +12,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class BrowserUtils {
+public class BrowserUtils {public static void sleep(int second){
+    second *=1000;
+    try {
+        Thread.sleep(second);
+    }catch (InterruptedException e ) {
 
-    /*
-This method will accept int (in seconds) and execute Thread.sleep
-for given duration
- */
-    public static void sleep(int second){
-        second *=1000;
-        try {
-            Thread.sleep(second);
-        }catch (InterruptedException e ) {
-
-        }
     }
+}
 
     /*
     This method accepts 3 arguments.
@@ -227,7 +221,6 @@ for given duration
     public static WebElement waitForClickablility(By locator, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
-
     }
 
     /**
@@ -287,7 +280,7 @@ for given duration
      * @param element
      * @throws AssertionError if the element is not found or not displayed
      */
-    public static void verifyElementDisplayed(WebElement element,int i) {
+    public static void verifyElementDisplayed(WebElement element) {
         try {
             Assert.assertTrue("Element not visible: " + element, element.isDisplayed());
         } catch (NoSuchElementException e) {
@@ -295,7 +288,6 @@ for given duration
             Assert.fail("Element not found: " + element);
 
         }
-
     }
 
 
