@@ -4,5 +4,4 @@ public class BasePage {
 
     //hello yunus
     //hello from Adnan
-    //hello from hakan
 }
