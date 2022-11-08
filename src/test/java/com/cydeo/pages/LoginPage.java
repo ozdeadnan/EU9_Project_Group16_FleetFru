@@ -6,39 +6,32 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
+    public LoginPage() { PageFactory.initElements(Driver.getDriver(), this); }
 
-    public LoginPage(){ PageFactory.initElements(Driver.getDriver(),this); }
 
     @FindBy(id = "prependedInput")
-    public WebElement usernameInput;
+    public WebElement userNameInput;
 
-    @FindBy(id = "prependedInput2")
+    @FindBy(id="prependedInput2")
     public WebElement passwordInput;
 
     @FindBy(id = "_submit")
-    public WebElement submitButton;
+    public WebElement logInButton;
 
+    @FindBy(xpath = "//div[@class='alert alert-error']")
+    public WebElement invalidUsernameOrPassword;
 
-    @FindBy(css = ".oro-subtitle")
-    public WebElement header;
+    @FindBy(xpath = "//a[.='Forgot your password?']")
+    public  WebElement  forgotYourPasswordLink;
 
-    @FindBy(xpath = "//div[text()='Invalid user name or password.']")
-    public WebElement alertMessage;
+    @FindBy(xpath = "//span[@class='custom-checkbox__text']")
+    public WebElement rememberMeText;
+
+    @FindBy(xpath = "//input[@id='remember_me']")
+    public WebElement rememberMeClickable;
 
     @FindBy(xpath = "//h2[@class='title']")
-    public WebElement loginPageHeader;
-
-    @FindBy(linkText ="Forgot your password?")
-    public WebElement forgotPasswordLink;
-
-    @FindBy(xpath = "//h2[@class='title']")
-    public  WebElement forgotHeader;
-
-    @FindBy(css = ".custom-checkbox__text")
-    public WebElement rememberText;
-
-    @FindBy(xpath = "//span[@class='custom-checkbox__icon']")
-    public WebElement rememberCheckbox;
+    public WebElement loginPageText;
 
 
 
