@@ -1,8 +1,5 @@
 package com.cydeo.pages;
 
 public class BasePage {
-
-    //hello yunus
-    //hello from Adnan
-    //hello from gurkan
+//All common classes ready
 }
