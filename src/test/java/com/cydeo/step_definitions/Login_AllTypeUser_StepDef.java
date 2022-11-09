@@ -4,6 +4,7 @@ import com.cydeo.pages.LoginPage;
 import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Login_AllTypeUser_StepDef {
@@ -41,6 +42,7 @@ public class Login_AllTypeUser_StepDef {
         loginPage.logInButton.click();
 
     }
+
 
 
 }
