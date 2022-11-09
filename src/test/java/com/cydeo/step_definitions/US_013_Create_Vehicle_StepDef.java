@@ -1,5 +1,6 @@
 package com.cydeo.step_definitions;
 
+import com.cydeo.pages.BasePage;
 import com.cydeo.pages.FleetVehiclesPages;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Then;
@@ -8,7 +9,7 @@ import org.junit.Assert;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.interactions.Actions;
 
-public class US_013_Create_Vehicle_StepDef {
+public class  US_013_Create_Vehicle_StepDef {
 
     FleetVehiclesPages fleet_vehiclesPages =new FleetVehiclesPages();
     Actions action = new Actions(Driver.getDriver());
@@ -16,7 +17,7 @@ public class US_013_Create_Vehicle_StepDef {
     @When("The user should see Dashboard")
     public void the_user_should_see_dashboard() throws InterruptedException {
 
-        Thread.sleep(5000);
+        fleet_vehiclesPages.waitLoadingBar();
 
         Assert.assertEquals("Dashboard",Driver.getDriver().getTitle());
     }
@@ -25,7 +26,7 @@ public class US_013_Create_Vehicle_StepDef {
 
         action.moveToElement(fleet_vehiclesPages.FleetDropdownMenu).perform();
 
-        Thread.sleep(10000);
+
 
 
     }
@@ -35,7 +36,7 @@ public class US_013_Create_Vehicle_StepDef {
 
         fleet_vehiclesPages.VehiclesButton.click();
 
-        Thread.sleep(20000);
+        fleet_vehiclesPages.waitUntilLoaderScreenDisappear();
 
     }
     @Then("Create Car button shouldn't be displayed")
@@ -62,7 +63,7 @@ public class US_013_Create_Vehicle_StepDef {
     public void the_user_clicks_create_car_button() throws InterruptedException {
 
         fleet_vehiclesPages.CreateCarButton.click();
-        Thread.sleep(5000);
+       fleet_vehiclesPages.waitUntilLoaderScreenDisappear();
 
     }
     @Then("The user should see Create Car Page")
