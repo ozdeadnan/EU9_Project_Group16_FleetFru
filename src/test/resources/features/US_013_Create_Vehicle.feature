@@ -12,7 +12,7 @@ Feature: Create Vehicle
     Then Create Car button shouldn't be displayed
 
 
-
+@wip
   Scenario:"Create Car" button should be displayed for Sales Manager on the "All Cars" page
   and clicking the button should refer the user "Create Car Page"
 
@@ -24,7 +24,7 @@ Feature: Create Vehicle
     And The user clicks Create Car Button
     Then The user should see Create Car Page
 
-  @wip
+
   Scenario:"Create Car" button should be displayed for Store Manager on the "All Cars" page
   and clicking the button should refer the user "Create Car Page"
 
