@@ -1,6 +1,6 @@
 package com.cydeo.pages;
 
-public abstract class BasePage {
-    //abc
-
+public class BasePage {
+//All common classes ready
+    //Are you ready to flight gurkan????
 }
