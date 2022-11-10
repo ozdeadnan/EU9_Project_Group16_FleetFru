@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>10 Nov 2022, 16:15</td>
+      <td>11 Nov 2022, 00:59</td>
     </tr>
   </tbody>
 </table>
@@ -127,18 +127,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@gurkan</td>
-          <td      class="passed"    >6</td>
+          <td >0</td>
           <td      class="failed"    >1</td>
+          <td     class="skipped"   >5</td>
           <td >0</td>
           <td >0</td>
-          <td >0</td>
-          <td class="total">7</td>
+          <td class="total">6</td>
 
           <td >0</td>
           <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="19723129700">19.723</td>
+          <td class="duration" data-value="10037424700">10.037</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -181,14 +181,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">19.723</span>
+  <span class="lead-duration duration">10.037</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">&quot;Driver&quot; filter should provide the methods</span>
+  <span class="name">User can select &quot;Driver&quot; filter under 'Fleet-Vehicles' module</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -220,173 +220,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
+<div class="brief step-name-When failed">
   <span class="keyword indention">When</span>
   <span class="name">The user logs in as a driver</span>
 
-  <span class="lead-duration duration">3.431</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">The user should see Dashboard</span>
-
-  <span class="lead-duration duration">0.245</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">User hover over on fleet menu and click vehicles</span>
-
-  <span class="lead-duration duration">0.548</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">User click manage filters button and select driver</span>
-
-  <span class="lead-duration duration">4.519</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">User click driver button</span>
-
-  <span class="lead-duration duration">0.229</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">user click contains button</span>
-
-  <span class="lead-duration duration">0.682</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then failed">
-  <span class="keyword indention">Then</span>
-  <span class="name">user should see certain list</span>
-
-  <span class="lead-duration duration">10.065</span>
+  <span class="lead-duration duration">10.037</span>
 
 </div>
 
@@ -401,15 +239,15 @@ $(document).ready(function() {
           <a>org.openqa.selenium.NoSuchElementException:</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//ul/li/select[@class='dropdown-item choice-value']&quot;}
+        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#prependedInput&quot;}
   (Session info: chrome=107.0.5304.106)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-EDSCOJA', ip: '192.168.1.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.106, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\GO-TRADE\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53061}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: f5b1e573fb2dc9f4cd12324c8a418e13
-*** Element info: {Using=xpath, value=//ul/li/select[@class='dropdown-item choice-value']}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.106, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\GO-TRADE\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54917}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b41a9f1492e17defe5932c3f263ddbb0
+*** Element info: {Using=id, value=prependedInput}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -421,51 +259,155 @@ Session ID: f5b1e573fb2dc9f4cd12324c8a418e13
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy19.getTagName(Unknown Source)
-	at org.openqa.selenium.support.ui.Select.&lt;init&gt;(Select.java:45)
-	at com.cydeo.utilities.BrowserUtils.dropdownOptionsAsString(BrowserUtils.java:76)
-	at com.cydeo.step_definitions.US_011_Driver_Filter_stepDefinitions.user_should_see_certain_list(US_011_Driver_Filter_stepDefinitions.java:61)
-	at &#10045;.user should see certain list(file:///C:/Users/GO-TRADE/IdeaProjects/EU9_Project_Group16_FleetFru/src/test/resources/features/US_011_Driver_Filter.feature:22)
+	at com.sun.proxy.$Proxy19.sendKeys(Unknown Source)
+	at com.cydeo.step_definitions.Login_AllTypeUser_StepDef.the_user_logs_in_as_a_driver(Login_AllTypeUser_StepDef.java:21)
+	at &#10045;.The user logs in as a driver(file:///C:/Users/GO-TRADE/IdeaProjects/EU9_Project_Group16_FleetFru/src/test/resources/features/US_011_Driver_Filter.feature:16)
 </pre>
       </div>
     </div>
   </div>
 
 
-          <table class="step-arguments">
-              <tr>
-                  <td>Contains</td>
-              </tr>
-              <tr>
-                  <td>Does Not Contain</td>
-              </tr>
-              <tr>
-                  <td>Is Equal To</td>
-              </tr>
-              <tr>
-                  <td>Starts With</td>
-              </tr>
-              <tr>
-                  <td>Ends With</td>
-              </tr>
-              <tr>
-                  <td>Is Any Of</td>
-              </tr>
-              <tr>
-                  <td>Is Not Any Of</td>
-              </tr>
-              <tr>
-                  <td>Is Empty</td>
-              </tr>
-              <tr>
-                  <td>Is Not Empty</td>
-              </tr>
-          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">The user should see Dashboard</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">User hover over on fleet menu and click vehicles</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">User click manage filters button and select driver</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">User click DriverFilterButton</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">user should see certain list</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
 
 
 
@@ -501,7 +443,7 @@ Session ID: f5b1e573fb2dc9f4cd12324c8a418e13
             <span class="keyword indention">After</span>
               <span class="location name">com.cydeo.step_definitions.Hooks.teardownScenario(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">1.158</span>
+  <span class="lead-duration duration">0.916</span>
 
           </div>
 
@@ -513,14 +455,14 @@ Session ID: f5b1e573fb2dc9f4cd12324c8a418e13
   <div class="embeddings inner-level">
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-5" class="collapsable-control">
-      <a>&quot;Driver&quot; filter should provide the methods</a>
-      <a href="embeddings/embedding_1154566926.png" download target="_blank">
+      <a>User can select &quot;Driver&quot; filter under 'Fleet-Vehicles' module</a>
+      <a href="embeddings/embedding_-335501912.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-5" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_1154566926.png">
+        <img src="embeddings/embedding_-335501912.png">
       </div>
     </div>
   </div>
