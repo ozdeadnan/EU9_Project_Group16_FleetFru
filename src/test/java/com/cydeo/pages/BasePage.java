@@ -9,8 +9,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class BasePage {
-
-
     public BasePage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
@@ -36,5 +34,10 @@ public abstract class BasePage {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(),10);
         wait.until(ExpectedConditions.invisibilityOf(loadingBar));
     }
-
+//a
 }
+
+
+
+
+
