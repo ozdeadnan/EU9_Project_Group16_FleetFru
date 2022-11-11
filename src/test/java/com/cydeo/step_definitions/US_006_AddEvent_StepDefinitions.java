@@ -77,13 +77,24 @@ public class US_006_AddEvent_StepDefinitions {
         } catch (NoSuchElementException e) {
             e.printStackTrace();
         }
-
-               // String actualAddEventButton = addEventPage.addEventPopUpHeader.getText();
+        // String actualAddEventButton = addEventPage.addEventPopUpHeader.getText();
        // String expectedAddEvent="Add Event";
        // Assert.assertEquals(expectedAddEvent,actualAddEventButton);
 
       //  System.out.println("actualAddEventButton = " + actualAddEventButton);
 
+
+    }
+
+    @Then("User can click add event button and add event page should pop up")
+    public void user_can_click_add_event_button_and_add_event_page_should_pop_up() {
+
+        addEventPage.waitUntilLoaderScreenDisappear();
+        addEventPage.addEventButton.click();
+
+        BrowserUtils.sleep(9);
+        addEventPage.waitUntilLoaderScreenDisappear();
+        Assert.assertTrue(addEventPage.addEventPopUp.isDisplayed());
 
     }
 }
