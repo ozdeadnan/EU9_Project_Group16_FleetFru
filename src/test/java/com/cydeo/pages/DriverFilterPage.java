@@ -27,6 +27,15 @@ public class DriverFilterPage extends BasePage {
 
 
 
+    @FindBy(xpath = "//*[@id=\"grid-custom-entity-grid-695393704\"]/div[1]/div/span/div[3]/div[2]/div/div[1]/button")
+    public static WebElement DriverFilterButton;
+
+
+
+
+
+
+
 
 
 
