@@ -15,7 +15,7 @@ Feature: As a store manager and sales manager, I should be able to add an event
       | Store Manager |
       | Sales Manager |
 
-    @step2
+    @step2 @step3
   Scenario Outline: After clicking on "Add event" button, "Add Event" page should pop up.
     When "<userType>" land on home page using valid credentials
     And User hover over fleet tab and clicks Vehicles module
