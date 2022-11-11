@@ -2,10 +2,13 @@ package com.cydeo.pages;
 
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class FleetVehiclesPages {
+import java.util.List;
+
+public class FleetVehiclesPages extends BasePage{
 
     public FleetVehiclesPages() { PageFactory.initElements(Driver.getDriver(), this); }
 
@@ -17,6 +20,22 @@ public class FleetVehiclesPages {
 
     @FindBy (xpath= "//a[@title='Create Car']")
     public WebElement CreateCarButton;
+
+
+    @FindBy (xpath= "//a [@class='btn-success btn dropdown-toggle' ]")
+    public WebElement SavingOptionsButton;
+
+    @FindBy(xpath = "(//ul [@class='dropdown-menu' ])[3]")
+    public WebElement SavingOptionsDropdownMenu;
+
+    @FindBy(xpath = "// input [@name='custom_entity_type[Driver]']")
+    public WebElement DriverInput;
+
+    @FindBy(xpath = "//div[@class='btn-group pull-right open']//ul//li//button")
+    public List<WebElement> SavingOptions;
+
+
+    
 
 
 }
