@@ -1,4 +1,4 @@
-@gurkan
+
 Feature: US_011_Driver_Filter
 
   Background:
@@ -20,7 +20,8 @@ Feature: US_011_Driver_Filter
     And  User click DriverFilterButton
     Then user should see method list
 
-      #AC 3/4/5/6/7
+    @gurkan
+       #AC 3/4/5/6/7
   Scenario:user select filter method
     When The user logs in as a driver
     And  The user should see Dashboard
@@ -34,6 +35,7 @@ Feature: US_011_Driver_Filter
     And  user selects Ends With method with a keyword, the results should end with the specified keyword
     Then user selects Is Equal to method with a keyword, the results should match the specified keyword exactly
 
+
        # AC 8
   Scenario: Some methods shouldn't accept non-alphabetical characters
     When The user logs in as a driver
@@ -46,4 +48,4 @@ Feature: US_011_Driver_Filter
     And  Does Not Contains method shouldn't accept non-alphabetical characters
     And  Starts With method shouldn't accept non-alphabetical characters
     And  Ends With method shouldn't accept non-alphabetical characters
-    Then  Is Equal to method shouldn't accept non-alphabetical characters
+    Then Is Equal to method shouldn't accept non-alphabetical characters

@@ -26,7 +26,8 @@ public class US_011_Driver_Filter_stepDefinitions {
     @When("User hover over on fleet menu and click vehicles")
     public void user_hover_over_on_fleet_menu_and_click_vehicles() throws InterruptedException {
         actions.moveToElement(DriverFilterPage.FleetDropdownMenu).perform();
-        DriverFilterPage.VehiclesButton.click();
+
+        driverFilterPage.VehiclesButton.click();
 
         driverFilterPage.waitUntilLoaderScreenDisappear();
     }
@@ -35,19 +36,22 @@ public class US_011_Driver_Filter_stepDefinitions {
     public void user_click_manage_filters_button_and_select_driver() throws InterruptedException {
         DriverFilterPage.FilterIconButton.click();
         driverFilterPage.waitUntilLoaderScreenDisappear();
+
         DriverFilterPage.ManageFilterButton.click();
         driverFilterPage.waitUntilLoaderScreenDisappear();
+
         DriverFilterPage.DriverCheckBox.click();
         driverFilterPage.waitUntilLoaderScreenDisappear();
+
         DriverFilterPage.DriverCheckBox.isSelected();
 
     }
 
     @When("User click DriverFilterButton")
-    public void userClickDriverFilterButton() {
+    public void userClickDriverFilterButton() throws InterruptedException {
 
-        DriverFilterPage.DriverFilterButton.click();
-
+        driverFilterPage.DriverFilterButton.click();
+        Thread.sleep(3000);
     }
 
     @Then("user should see method list")
@@ -59,24 +63,48 @@ public class US_011_Driver_Filter_stepDefinitions {
 
     //AC 3-4-5-6-7
 
+
+
     @When("user selects Contains method with a keyword, the results should contain the specified keyword")
-    public void user_selects_contains_method_with_a_keyword_the_results_should_contain_the_specified_keyword() {
+    public void user_selects_contains_method_with_a_keyword_the_results_should_contain_the_specified_keyword() throws InterruptedException {
+
+        driverFilterPage.FilterDropdownButton.click();
+        driverFilterPage.ContainsFilterButton.click();
+        // Thread.sleep(1000);
+
 
     }
     @When("user selects Does Not Contain method with a keyword, the results should not contain the specified keyword")
-    public void user_selects_does_not_contain_method_with_a_keyword_the_results_should_not_contain_the_specified_keyword() {
+    public void user_selects_does_not_contain_method_with_a_keyword_the_results_should_not_contain_the_specified_keyword() throws InterruptedException {
+
+        driverFilterPage.FilterDropdownButton.click();
+        driverFilterPage.DoesNotContainFilterButton.click();
+
 
     }
     @When("user selects Starts-with method with a keyword, the results should start with the specified keyword")
-    public void user_selects_starts_with_method_with_a_keyword_the_results_should_start_with_the_specified_keyword() {
+    public void user_selects_starts_with_method_with_a_keyword_the_results_should_start_with_the_specified_keyword() throws InterruptedException {
+
+        driverFilterPage.FilterDropdownButton.click();
+        driverFilterPage.StartswithFilterButton.click();
+
 
     }
     @When("user selects Ends With method with a keyword, the results should end with the specified keyword")
-    public void user_selects_ends_with_method_with_a_keyword_the_results_should_end_with_the_specified_keyword() {
+    public void user_selects_ends_with_method_with_a_keyword_the_results_should_end_with_the_specified_keyword() throws InterruptedException {
+
+        driverFilterPage.FilterDropdownButton.click();
+        driverFilterPage.EndsWithFilterButton.click();
+
 
     }
     @Then("user selects Is Equal to method with a keyword, the results should match the specified keyword exactly")
-    public void user_selects_is_equal_to_method_with_a_keyword_the_results_should_match_the_specified_keyword_exactly() {
+    public void user_selects_is_equal_to_method_with_a_keyword_the_results_should_match_the_specified_keyword_exactly() throws InterruptedException {
+
+        driverFilterPage.FilterDropdownButton.click();
+        driverFilterPage.IsEqualToFilterButton.click();
+
+
 
     }
 
@@ -85,23 +113,39 @@ public class US_011_Driver_Filter_stepDefinitions {
     @When("Contains method shouldn't accept non-alphabetical characters")
     public void contains_method_shouldn_t_accept_non_alphabetical_characters() {
 
+        driverFilterPage.FilterDropdownButton.click();
+        driverFilterPage.ContainsFilterButton.click();
+
     }
     @When("Does Not Contains method shouldn't accept non-alphabetical characters")
     public void does_not_contains_method_shouldn_t_accept_non_alphabetical_characters() {
+
+        driverFilterPage.FilterDropdownButton.click();
+        driverFilterPage.DoesNotContainFilterButton.click();
 
     }
     @When("Starts With method shouldn't accept non-alphabetical characters")
     public void starts_with_method_shouldn_t_accept_non_alphabetical_characters() {
 
+        driverFilterPage.FilterDropdownButton.click();
+        driverFilterPage.StartswithFilterButton.click();
+
     }
     @When("Ends With method shouldn't accept non-alphabetical characters")
     public void ends_with_method_shouldn_t_accept_non_alphabetical_characters() {
+
+        driverFilterPage.FilterDropdownButton.click();
+        driverFilterPage.EndsWithFilterButton.click();
 
     }
     @When("Is Equal to method shouldn't accept non-alphabetical characters")
     public void is_equal_to_method_shouldn_t_accept_non_alphabetical_characters() {
 
+        driverFilterPage.FilterDropdownButton.click();
+        driverFilterPage.IsEqualToFilterButton.click();
+
     }
+
 
 }
 
