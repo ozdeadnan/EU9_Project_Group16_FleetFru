@@ -15,8 +15,11 @@ Feature: As a store manager and sales manager, I should be able to add an event
       | Sales Manager |
 
     @ihsan
-    Scenario: Sales Manager and Store manager can click "Add Event" button, but Driver can NOT see "Add Event" button
-      When Driver land on home page using valid credentials
+    Scenario Outline: Sales Manager and Store manager can click "Add Event" button, but Driver can NOT see "Add Event" button
+      When "<userType>" land on home page using valid credentials
       And User hover over fleet tab and clicks Vehicles module
       And User click on any vehicle and land on general information page
       Then User should not see the Add Event button
+      Examples:
+        | userType |
+        | Driver   |
