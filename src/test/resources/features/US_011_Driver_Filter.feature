@@ -11,16 +11,27 @@ Feature: US_011_Driver_Filter
     And  User hover over on fleet menu and click vehicles
     Then User click manage filters button and select driver
 
+    @gurkan
        #AC 2
-  Scenario: User can select "Driver" filter under 'Fleet-Vehicles' module
+  Scenario: "Driver" filter should provide the methods shown as below:
     When The user logs in as a driver
     And  The user should see Dashboard
     And  User hover over on fleet menu and click vehicles
     And  User click manage filters button and select driver
     And  User click DriverFilterButton
     Then user should see method list
+      | Contains         |
+      | Does Not Contain |
+      | Is Equal To      |
+      | Starts With      |
+      | Ends With        |
+      | Is Any Of        |
+      | Is Not Any Of    |
+      | Is Empty         |
+      | Is Not Empty     |
 
-    @gurkan
+
+
        #AC 3/4/5/6/7
   Scenario:user select filter method
     When The user logs in as a driver
