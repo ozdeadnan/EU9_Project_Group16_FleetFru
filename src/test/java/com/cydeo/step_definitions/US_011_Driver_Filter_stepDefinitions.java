@@ -6,7 +6,10 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+
+import java.util.List;
 
 public class US_011_Driver_Filter_stepDefinitions {
 
@@ -55,7 +58,31 @@ public class US_011_Driver_Filter_stepDefinitions {
     }
 
     @Then("user should see method list")
-    public void userShouldSeeMethodList() {
+    public void userShouldSeeMethodList(List<String> expectedOptions) {
+
+        List<WebElement> actualoptions= driverFilterPage.DriverFilterOptions;
+
+        for (int i = 0; i <=8; i++) {
+            Assert.assertEquals(expectedOptions.get(i), actualoptions.get(i).getText());
+        }
+
+        actualoptions.forEach(i->System.out.println(i.getText()));
+        System.out.println("expectedOptions = " + expectedOptions);
+
+        /*
+
+        Assert.assertEquals(expectedOptions.get(0), actualoptions.get(0).getText());
+        Assert.assertEquals(expectedOptions.get(1), actualoptions.get(1).getText());
+        Assert.assertEquals(expectedOptions.get(2), actualoptions.get(2).getText());
+        Assert.assertEquals(expectedOptions.get(3), actualoptions.get(3).getText());
+        Assert.assertEquals(expectedOptions.get(4), actualoptions.get(4).getText());
+        Assert.assertEquals(expectedOptions.get(5), actualoptions.get(5).getText());
+        Assert.assertEquals(expectedOptions.get(6), actualoptions.get(6).getText());
+        Assert.assertEquals(expectedOptions.get(7), actualoptions.get(7).getText());
+        Assert.assertEquals(expectedOptions.get(8), actualoptions.get(8).getText());
+        */
+
+
 
 
     }
@@ -70,7 +97,8 @@ public class US_011_Driver_Filter_stepDefinitions {
 
         driverFilterPage.FilterDropdownButton.click();
         driverFilterPage.ContainsFilterButton.click();
-        // Thread.sleep(1000);
+
+        driverFilterPage.DriverFilterInput.sendKeys();
 
 
     }
@@ -80,6 +108,8 @@ public class US_011_Driver_Filter_stepDefinitions {
         driverFilterPage.FilterDropdownButton.click();
         driverFilterPage.DoesNotContainFilterButton.click();
 
+        driverFilterPage.DriverFilterInput.sendKeys();
+
 
     }
     @When("user selects Starts-with method with a keyword, the results should start with the specified keyword")
@@ -87,6 +117,8 @@ public class US_011_Driver_Filter_stepDefinitions {
 
         driverFilterPage.FilterDropdownButton.click();
         driverFilterPage.StartswithFilterButton.click();
+
+        driverFilterPage.DriverFilterInput.sendKeys();
 
 
     }
@@ -96,6 +128,8 @@ public class US_011_Driver_Filter_stepDefinitions {
         driverFilterPage.FilterDropdownButton.click();
         driverFilterPage.EndsWithFilterButton.click();
 
+        driverFilterPage.DriverFilterInput.sendKeys();
+
 
     }
     @Then("user selects Is Equal to method with a keyword, the results should match the specified keyword exactly")
@@ -103,6 +137,8 @@ public class US_011_Driver_Filter_stepDefinitions {
 
         driverFilterPage.FilterDropdownButton.click();
         driverFilterPage.IsEqualToFilterButton.click();
+
+        driverFilterPage.DriverFilterInput.sendKeys();
 
 
 
@@ -144,9 +180,8 @@ public class US_011_Driver_Filter_stepDefinitions {
         driverFilterPage.FilterDropdownButton.click();
         driverFilterPage.IsEqualToFilterButton.click();
 
+
     }
-
-
 }
 
 
