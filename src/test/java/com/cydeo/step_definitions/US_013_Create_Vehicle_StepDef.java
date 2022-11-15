@@ -2,6 +2,7 @@ package com.cydeo.step_definitions;
 
 import com.cydeo.pages.BasePage;
 import com.cydeo.pages.FleetVehiclesPages;
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -23,7 +24,7 @@ public class  US_013_Create_Vehicle_StepDef {
     }
     @When("The user hovers over Fleet")
     public void the_user_hovers_over_fleet() throws InterruptedException {
-
+        BrowserUtils.waitFor(3);
         action.moveToElement(fleet_vehiclesPages.FleetDropdownMenu).perform();
 
 
