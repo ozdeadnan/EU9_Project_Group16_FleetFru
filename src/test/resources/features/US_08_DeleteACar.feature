@@ -4,14 +4,18 @@ Feature: Delete A Car
   Background:
     Given The user is on the login page
 
-
-    Scenario:  users can see the delete sign by hovering over the three dots
-      When users log in
+  @ersin
+    Scenario Outline:  users can see the delete sign by hovering over the three dots
+      When users enter "<username>" and "<password>"
       And users hover over Fleet menu
       And user click Vehicles
       And users hover over three dots
       Then users can see the delete sign
-
+      Examples:
+      |username       |password   |
+      |user1          |UserUser123|
+      |salesmanager102|UserUser123|
+      |storemanager52 |UserUser123|
 
       Scenario: users see confirmation pop up
         When users log in
@@ -48,3 +52,5 @@ Feature: Delete A Car
       And sales manager and store manager click on any vehicle row
       And click on delete btn
       Then the sign is car deleted
+
+    //hey
