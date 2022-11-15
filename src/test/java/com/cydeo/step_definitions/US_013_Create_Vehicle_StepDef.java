@@ -11,6 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.interactions.Actions;
+import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -29,7 +30,22 @@ public class  US_013_Create_Vehicle_StepDef {
     @When("The user hovers over Fleet")
     public void the_user_hovers_over_fleet() throws InterruptedException {
 
-        action.moveToElement(fleet_vehiclesPages.FleetDropdownMenu).perform();
+
+
+
+        fleet_vehiclesPages.waitUntilLoaderScreenDisappear();
+
+        try {
+            fleet_vehiclesPages.addEventPopUp.isDisplayed();
+            BrowserUtils.waitForClickablility(fleet_vehiclesPages.popUpCloseButton, 10);
+            fleet_vehiclesPages.popUpCloseButton.click();
+
+            action.moveToElement(fleet_vehiclesPages.FleetDropdownMenu).perform();
+
+
+        } catch (Exception e) {
+            action.moveToElement(fleet_vehiclesPages.FleetDropdownMenu).perform();
+        }
 
 
 
@@ -42,13 +58,12 @@ public class  US_013_Create_Vehicle_StepDef {
         fleet_vehiclesPages.VehiclesButton.click();
 
         fleet_vehiclesPages.waitUntilLoaderScreenDisappear();
+        fleet_vehiclesPages.waitLoadingBar();
 
     }
     @Then("Create Car button shouldn't be displayed")
     public void create_car_button_shouldn_t_be_displayed() {
 
-        //Assert.assertTrue(!fleet_vehicles.CreateCarButton.isDisplayed());
-        //Assert.assertEquals(false,fleet_vehicles.CreateCarButton.isDisplayed());
         try {
            fleet_vehiclesPages.CreateCarButton.isDisplayed();
             Assert.assertTrue(false);
@@ -90,9 +105,6 @@ public class  US_013_Create_Vehicle_StepDef {
     @When("User should see below info in saving options dropdown")
     public void user_should_see_below_info_in_saving_options_dropdown(List<String> expectedOptions) throws InterruptedException {
 
-        //button [@class='main-group action-button dropdown-item'])[2]
-
-        //BrowserUtils.dropdownOptionsAsString("")
 
         List<WebElement> actualoptions= fleet_vehiclesPages.SavingOptions;
 
@@ -137,8 +149,55 @@ public class  US_013_Create_Vehicle_StepDef {
     @Then("User should see {string} in {string}")
     public void user_should_see_in(String string, String string2) {
 
-        fleet_vehiclesPages.DriverInput.sendKeys("a1");
-        System.out.println("fleet_vehiclesPages.DriverInput.getText() = " + fleet_vehiclesPages.DriverInput.getText());
+           //   fleet_vehiclesPages.DriverInput.sendKeys("a1");
+           //   System.out.println("fleet_vehiclesPages.DriverInput.getText() = " + fleet_vehiclesPages.DriverInput.getText());
+
+           //   String alphaNumerical="text";
+           //   String numerical="number";
+
+           //    Assert.assertEquals(fleet_vehiclesPages.LicencePlateInput.getAttribute("type"),alphaNumerical);
+
+           //   if (string=="LicensePlate"){
+           //   fleet_vehiclesPages.LicencePlateInput.sendKeys("a1");
+           //   }
+
+
+            switch (string){
+                case "LicensePlate": case "ChassisNumber":
+                    fleet_vehiclesPages.LicencePlateInput.sendKeys("a1");
+                    fleet_vehiclesPages.ChassisNumberInput.sendKeys("a1");
+                case "Driver": case "Location":  case "Color":
+                    fleet_vehiclesPages.DriverInput.sendKeys("a");
+                    fleet_vehiclesPages.LocationInput.sendKeys("a");
+                    fleet_vehiclesPages.ColorInput.sendKeys("a");
+                case "ModelYear": case "LastOdometer": case "CatalogValue":case "SeatNumber":case "DoorsNumber":case "Co2Emission":case "Horsepower":case "HorsepowerTaxation":case "Power":
+                    fleet_vehiclesPages.ModelYearInput.sendKeys("1");
+                    fleet_vehiclesPages.LastOdometerInput.sendKeys("1");
+                    fleet_vehiclesPages.CatalogValueInput.sendKeys("1");
+                    fleet_vehiclesPages.SeatsNumberInput.sendKeys("1");
+                    fleet_vehiclesPages.DoorsNumberInput.sendKeys("1");
+                    fleet_vehiclesPages.Co2EmissionsInput.sendKeys("1");
+                    fleet_vehiclesPages.HorsepowerInput.sendKeys("1");
+                    fleet_vehiclesPages.HorsepowerTaxationInput.sendKeys("1");
+                    fleet_vehiclesPages.PowerInput.sendKeys("1");
+
+
+            }
+
+
+
+
+            BrowserUtils.waitForClickablility(fleet_vehiclesPages.SaveAndCloseButton,10);
+
+            fleet_vehiclesPages.SaveAndCloseButton.click();
+
+            fleet_vehiclesPages.waitUntilLoaderScreenDisappear();
+
+
+
+            Assert.assertFalse(fleet_vehiclesPages.InvalidValue.isDisplayed());
+
+        System.out.println("fleet_vehiclesPages.InvalidValue.isDisplayed() = " + fleet_vehiclesPages.InvalidValue.isDisplayed());
 
 
     }

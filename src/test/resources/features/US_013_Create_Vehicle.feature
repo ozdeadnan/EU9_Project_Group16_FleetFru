@@ -70,24 +70,24 @@ Feature: Create Vehicle
 
     Examples:
       | entries             | determinedStructure |
-      | licensePlate        | alpha-numerical     |
-      | driver              | alphabetical        |
-      | location            | alphabetical        |
-      | chassisNumber       | alpha-numerical     |
-      | modelYear           | numerical           |
-      | lastOdometer        | numerical           |
-      | immatriculationDate | date                |
-      | firstContractDate   | date                |
-      | catalogValue        | numerical           |
-      | seatNumber          | numerical           |
-      | doorsNumber         | numerical           |
-      | colour              | alphabetical        |
-      | co2Emission         | numerical           |
-      | horsepower          | numerical           |
-      | horsepowerTaxation  | numerical           |
-      | power               | numerical           |
+      | LicensePlate        | alpha-numerical     |
+      | Driver              | alphabetical        |
+      | Location            | alphabetical        |
+      | ChassisNumber       | alpha-numerical     |
+      | ModelYear           | numerical           |
+      | LastOdometer        | numerical           |
+      | ImmatriculationDate | date                |
+      | FirstContractDate   | date                |
+      | CatalogValue        | numerical           |
+      | SeatNumber          | numerical           |
+      | DoorsNumber         | numerical           |
+      | Color               | alphabetical        |
+      | Co2Emission         | numerical           |
+      | Horsepower          | numerical           |
+      | HorsepowerTaxation  | numerical           |
+      | Power               | numerical           |
 
-@wip
+  @FLEETG-1673
   Scenario: Verify  saving options and entity saved message
 
     Given The user logs in as a store manager
