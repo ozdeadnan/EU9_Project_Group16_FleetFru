@@ -1,4 +1,4 @@
-
+@gurkan
 Feature: US_011_Driver_Filter
 
   Background:
@@ -39,7 +39,6 @@ Feature: US_011_Driver_Filter
     And  User hover over on fleet menu and click vehicles
     And  User click manage filters button and select driver
     And  User click DriverFilterButton
-    And  user should see method list
     And  user selects Contains method with a keyword, the results should contain the specified keyword
     And  user selects Does Not Contain method with a keyword, the results should not contain the specified keyword
     And  user selects Starts-with method with a keyword, the results should start with the specified keyword
@@ -54,7 +53,6 @@ Feature: US_011_Driver_Filter
     And  User hover over on fleet menu and click vehicles
     And  User click manage filters button and select driver
     And  User click DriverFilterButton
-    And  user should see method list
     And  Contains method shouldn't accept non-alphabetical characters
     And  Does Not Contains method shouldn't accept non-alphabetical characters
     And  Starts With method shouldn't accept non-alphabetical characters
