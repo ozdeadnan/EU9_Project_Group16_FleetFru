@@ -27,6 +27,7 @@ public abstract class BasePage {
 
     }
 
+
     @FindBy(xpath = "//div[@class='bar']")
     public WebElement loadingBar;
 

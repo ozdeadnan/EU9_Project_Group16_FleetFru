@@ -31,6 +31,7 @@ public class FleetVehiclesPages extends BasePage{
     @FindBy(xpath = "//div[@class='btn-group pull-right open']//ul//li//button")
     public List<WebElement> SavingOptions;
 
+
     @FindBy(xpath = "//div[@class='pull-right pinned-dropdown']")
     public WebElement SaveButton;
 

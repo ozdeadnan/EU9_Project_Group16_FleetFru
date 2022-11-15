@@ -40,6 +40,7 @@ Feature: Create Vehicle
     Then The user should see Create Car Page
 
 
+
   @FLEETG-1673
   Scenario Outline: Verify form data structures
     Given The user logs in as a store manager
