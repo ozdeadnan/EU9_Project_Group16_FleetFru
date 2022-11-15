@@ -21,6 +21,7 @@ public class FleetVehiclesPages extends BasePage{
     @FindBy (xpath= "//a[@title='Create Car']")
     public WebElement CreateCarButton;
 
+
     @FindBy (xpath= "//a [@class='btn-success btn dropdown-toggle' ]")
     public WebElement SavingOptionsButton;
 
@@ -107,6 +108,9 @@ public class FleetVehiclesPages extends BasePage{
 
     @FindBy(xpath = "//button[@title='close']")
     public WebElement popUpCloseButton;
+
+
+    
 
 
 }
