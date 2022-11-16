@@ -58,11 +58,23 @@ public class DriverFilterPage extends BasePage {
     @FindBy(css = ".filter-criteria.dropdown-menu a")
     public List<WebElement> DriverFilterOptions;
 
-    @FindBy(xpath = "//input[@name=\"value\"]")
+    @FindBy(xpath = "(//input[@type='text'])[2]")
     public WebElement DriverFilterInput;
 
     @FindBy(css = ".grid-body-cell-Driver")
     public List<WebElement> ContainsButton;
+
+    @FindBy(xpath = "//button[normalize-space()='Update']")
+    public WebElement UpdateButton;
+
+    @FindBy(xpath = "//i[@class='fa-close hide-text']")
+    public WebElement RefreshButton;
+
+    @FindBy(xpath= "//td[@class='string-cell grid-cell grid-body-cell grid-body-cell-Driver']")
+    public WebElement JoeCollins;
+
+    @FindBy(xpath = "//div[@class='no-data']")
+    public WebElement AlphanumericAlert;
 
 
 
