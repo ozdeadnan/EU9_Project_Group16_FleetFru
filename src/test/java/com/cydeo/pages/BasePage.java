@@ -21,7 +21,7 @@ public abstract class BasePage {
 
     public void waitUntilLoaderScreenDisappear() {
         try {
-            WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 15);
+            WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 40);
             wait.until(ExpectedConditions.invisibilityOf(loaderMask));
         } catch (Exception e) {
             e.printStackTrace();
@@ -34,7 +34,7 @@ public abstract class BasePage {
     public WebElement loadingBar;
 
     public void waitLoadingBar(){
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),10);
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),40);
         wait.until(ExpectedConditions.invisibilityOf(loadingBar));
     }
 
