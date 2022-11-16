@@ -30,10 +30,6 @@ public class  US_013_Create_Vehicle_StepDef {
     @When("The user hovers over Fleet")
     public void the_user_hovers_over_fleet() throws InterruptedException {
 
-        BrowserUtils.waitFor(3);
-        action.moveToElement(fleet_vehiclesPages.FleetDropdownMenu).perform();
-
-
 
 
 
@@ -49,7 +45,7 @@ public class  US_013_Create_Vehicle_StepDef {
 
         } catch (Exception e) {
             action.moveToElement(fleet_vehiclesPages.FleetDropdownMenu).perform();
-      
+        }
 
 
 
@@ -69,7 +65,7 @@ public class  US_013_Create_Vehicle_StepDef {
     public void create_car_button_shouldn_t_be_displayed() {
 
         try {
-           fleet_vehiclesPages.CreateCarButton.isDisplayed();
+            fleet_vehiclesPages.CreateCarButton.isDisplayed();
             Assert.assertTrue(false);
         } catch (NoSuchElementException e) {
             Assert.assertTrue(true);
@@ -87,7 +83,7 @@ public class  US_013_Create_Vehicle_StepDef {
     public void the_user_clicks_create_car_button() throws InterruptedException {
 
         fleet_vehiclesPages.CreateCarButton.click();
-       fleet_vehiclesPages.waitUntilLoaderScreenDisappear();
+        fleet_vehiclesPages.waitUntilLoaderScreenDisappear();
 
     }
     @Then("The user should see Create Car Page")
@@ -153,53 +149,53 @@ public class  US_013_Create_Vehicle_StepDef {
     @Then("User should see {string} in {string}")
     public void user_should_see_in(String string, String string2) {
 
-           //   fleet_vehiclesPages.DriverInput.sendKeys("a1");
-           //   System.out.println("fleet_vehiclesPages.DriverInput.getText() = " + fleet_vehiclesPages.DriverInput.getText());
+        //   fleet_vehiclesPages.DriverInput.sendKeys("a1");
+        //   System.out.println("fleet_vehiclesPages.DriverInput.getText() = " + fleet_vehiclesPages.DriverInput.getText());
 
-           //   String alphaNumerical="text";
-           //   String numerical="number";
+        //   String alphaNumerical="text";
+        //   String numerical="number";
 
-           //    Assert.assertEquals(fleet_vehiclesPages.LicencePlateInput.getAttribute("type"),alphaNumerical);
+        //    Assert.assertEquals(fleet_vehiclesPages.LicencePlateInput.getAttribute("type"),alphaNumerical);
 
-           //   if (string=="LicensePlate"){
-           //   fleet_vehiclesPages.LicencePlateInput.sendKeys("a1");
-           //   }
-
-
-            switch (string){
-                case "LicensePlate": case "ChassisNumber":
-                    fleet_vehiclesPages.LicencePlateInput.sendKeys("a1");
-                    fleet_vehiclesPages.ChassisNumberInput.sendKeys("a1");
-                case "Driver": case "Location":  case "Color":
-                    fleet_vehiclesPages.DriverInput.sendKeys("a");
-                    fleet_vehiclesPages.LocationInput.sendKeys("a");
-                    fleet_vehiclesPages.ColorInput.sendKeys("a");
-                case "ModelYear": case "LastOdometer": case "CatalogValue":case "SeatNumber":case "DoorsNumber":case "Co2Emission":case "Horsepower":case "HorsepowerTaxation":case "Power":
-                    fleet_vehiclesPages.ModelYearInput.sendKeys("1");
-                    fleet_vehiclesPages.LastOdometerInput.sendKeys("1");
-                    fleet_vehiclesPages.CatalogValueInput.sendKeys("1");
-                    fleet_vehiclesPages.SeatsNumberInput.sendKeys("1");
-                    fleet_vehiclesPages.DoorsNumberInput.sendKeys("1");
-                    fleet_vehiclesPages.Co2EmissionsInput.sendKeys("1");
-                    fleet_vehiclesPages.HorsepowerInput.sendKeys("1");
-                    fleet_vehiclesPages.HorsepowerTaxationInput.sendKeys("1");
-                    fleet_vehiclesPages.PowerInput.sendKeys("1");
+        //   if (string=="LicensePlate"){
+        //   fleet_vehiclesPages.LicencePlateInput.sendKeys("a1");
+        //   }
 
 
-            }
+        switch (string){
+            case "LicensePlate": case "ChassisNumber":
+                fleet_vehiclesPages.LicencePlateInput.sendKeys("a1");
+                fleet_vehiclesPages.ChassisNumberInput.sendKeys("a1");
+            case "Driver": case "Location":  case "Color":
+                fleet_vehiclesPages.DriverInput.sendKeys("a");
+                fleet_vehiclesPages.LocationInput.sendKeys("a");
+                fleet_vehiclesPages.ColorInput.sendKeys("a");
+            case "ModelYear": case "LastOdometer": case "CatalogValue":case "SeatNumber":case "DoorsNumber":case "Co2Emission":case "Horsepower":case "HorsepowerTaxation":case "Power":
+                fleet_vehiclesPages.ModelYearInput.sendKeys("1");
+                fleet_vehiclesPages.LastOdometerInput.sendKeys("1");
+                fleet_vehiclesPages.CatalogValueInput.sendKeys("1");
+                fleet_vehiclesPages.SeatsNumberInput.sendKeys("1");
+                fleet_vehiclesPages.DoorsNumberInput.sendKeys("1");
+                fleet_vehiclesPages.Co2EmissionsInput.sendKeys("1");
+                fleet_vehiclesPages.HorsepowerInput.sendKeys("1");
+                fleet_vehiclesPages.HorsepowerTaxationInput.sendKeys("1");
+                fleet_vehiclesPages.PowerInput.sendKeys("1");
 
 
-
-
-            BrowserUtils.waitForClickablility(fleet_vehiclesPages.SaveAndCloseButton,10);
-
-            fleet_vehiclesPages.SaveAndCloseButton.click();
-
-            fleet_vehiclesPages.waitUntilLoaderScreenDisappear();
+        }
 
 
 
-            Assert.assertFalse(fleet_vehiclesPages.InvalidValue.isDisplayed());
+
+        BrowserUtils.waitForClickablility(fleet_vehiclesPages.SaveAndCloseButton,10);
+
+        fleet_vehiclesPages.SaveAndCloseButton.click();
+
+        fleet_vehiclesPages.waitUntilLoaderScreenDisappear();
+
+
+
+        Assert.assertFalse(fleet_vehiclesPages.InvalidValue.isDisplayed());
 
         System.out.println("fleet_vehiclesPages.InvalidValue.isDisplayed() = " + fleet_vehiclesPages.InvalidValue.isDisplayed());
 
