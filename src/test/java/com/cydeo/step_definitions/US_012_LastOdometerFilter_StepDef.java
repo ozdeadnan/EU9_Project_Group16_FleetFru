@@ -220,7 +220,6 @@ public class US_012_LastOdometerFilter_StepDef {
         }
         Boolean result = false;
         for (String each : actualEqualList) {
-            System.out.println("each = " + each);
             if (each.isEmpty())
                 result = true;
         }
