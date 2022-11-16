@@ -73,6 +73,8 @@ Feature: As a store manager and sales manager, I should be able to add an event
     And User click save button
     Then Verify that should see add event information
 
+    ## finished
+
 
 
 
