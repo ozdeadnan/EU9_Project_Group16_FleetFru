@@ -19,15 +19,15 @@ public DeleteCarPages(){
     @FindBy(xpath = "//span[.='Vehicles']")
     public WebElement vehiclesButton;
 
-    @FindBy(xpath = "//a[.='...'][1]")
+
+    @FindBy(xpath = "//div[@class='dropdown']")
     public WebElement threeDots;
 
+    ////a[.='...'])[1]
     @FindBy(xpath = "//i[@class='fa-trash-o hide-text']")
     public WebElement trashBin;
 
-
-
-    //*[@id="grid-custom-entity-grid-130660246"]/div[2]/div[2]/div[2]/div/table/tbody/tr[1]/td[21]/div/div/ul/li/ul/li[3]/a/i
+    //i[@class='fa-trash-o hide-text']
 
 
     @FindBy(xpath = "//div[@class='modal oro-modal-danger in']")
@@ -49,10 +49,12 @@ public DeleteCarPages(){
     public WebElement noPermissionMsg;
 
     //text=You do not have permission to perform this action.
+    //You do not have permission to perform this action.
 
-    @FindBy(xpath = "//tr[@class='grid-row row-click-action'][2]")
+    @FindBy(xpath = "(//td[@class='string-cell grid-cell grid-body-cell grid-body-cell-Location'])[1]")
     public WebElement carRow;
 
+    ////tr[@class='grid-row row-click-action'][2]
     @FindBy(xpath = "//a[@title='Delete Car']")
     public WebElement deleteCarBtn;
 
