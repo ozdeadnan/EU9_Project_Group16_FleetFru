@@ -14,7 +14,11 @@ Feature: Create Vehicle
     Then Create Car button shouldn't be displayed
 
 
+
+
+
   @FLEETG-1671
+
   Scenario:"Create Car" button should be displayed for Sales Manager on the "All Cars" page
   and clicking the button should refer the user "Create Car Page"
 
