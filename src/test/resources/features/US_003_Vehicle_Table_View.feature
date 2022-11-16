@@ -57,7 +57,7 @@ Feature: As a user, I should be able to see all vehicle information in a table u
   Scenario Outline: User can download table data in XLS format from "Export Grid"
     When "<userType>" land on home page using valid credentials
     And User hover over fleet tab and clicks Vehicles module
-    And User click "Export Grid" module
+    And User click "Export Grid" modul
     Then User can download table data in XLS
 
     Examples:

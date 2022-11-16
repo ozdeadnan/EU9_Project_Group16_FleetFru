@@ -32,7 +32,7 @@ public class US_003_Vehicle_Table_View_StepDef {
         Assert.assertEquals("Of 5 |",VehicleTablePage.totalPageNum.getText());
     }
 
-
+//caner
     }
 
 
