@@ -1,3 +1,4 @@
+@FLEETG-1656
 Feature: As a store manager and sales manager, I should be able to add an event
 
   Background:
@@ -14,7 +15,6 @@ Feature: As a store manager and sales manager, I should be able to add an event
       | Store Manager |
       | Sales Manager |
 
-    @ihsan
     Scenario Outline: Sales Manager and Store manager can click "Add Event" button, but Driver can NOT see "Add Event" button
       When "<userType>" land on home page using valid credentials
       And User hover over fleet tab and clicks Vehicles module
